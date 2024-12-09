@@ -1,0 +1,290 @@
+[
+    {
+      "name": "Petits Pas Bordeaux",
+      "latitude": 44.8378,
+      "longitude": -0.5792,
+      "address": "12 Rue Saint-Catherine",
+      "city": "Bordeaux",
+      "zip": "33000",
+      "phone": "0556000001",
+      "mail": "contact@petitspas-bordeaux.fr",
+      "image": "https://via.placeholder.com/150",
+      "description": "Une crèche accueillante pour les petits Bordelais.",
+      "schedules": [
+        { "day": "Monday", "startTime": "08:00", "endTime": "18:00" },
+        { "day": "Tuesday", "startTime": "08:00", "endTime": "18:00" },
+        { "day": "Wednesday", "startTime": "08:00", "endTime": "18:00" },
+        { "day": "Thursday", "startTime": "08:00", "endTime": "18:00" },
+        { "day": "Friday", "startTime": "08:00", "endTime": "18:00" }
+      ],
+      "capacity": 20,
+      "type": "crèche"
+    },
+    {
+      "name": "MAM les Lutins",
+      "latitude": 44.8376,
+      "longitude": -0.5711,
+      "address": "25 Avenue Thiers",
+      "city": "Bordeaux",
+      "zip": "33100",
+      "phone": "0556000002",
+      "mail": "lutins@mam.fr",
+      "image": "https://via.placeholder.com/150",
+      "description": "Maison d'assistantes maternelles conviviale.",
+      "schedules": [
+        { "day": "Monday", "startTime": "07:30", "endTime": "19:00" },
+        { "day": "Tuesday", "startTime": "07:30", "endTime": "19:00" },
+        { "day": "Thursday", "startTime": "07:30", "endTime": "19:00" },
+        { "day": "Friday", "startTime": "07:30", "endTime": "19:00" }
+      ],
+      "capacity": 10,
+      "type": "MAM"
+    },
+    {
+      "name": "Cocon d'Enfance",
+      "latitude": 44.8371,
+      "longitude": -0.5764,
+      "address": "8 Rue des Ayres",
+      "city": "Bordeaux",
+      "zip": "33000",
+      "phone": "0556000003",
+      "mail": "cocon@creche.fr",
+      "image": "https://via.placeholder.com/150",
+      "description": "Un environnement chaleureux pour vos enfants.",
+      "schedules": [
+        { "day": "Monday", "startTime": "08:00", "endTime": "18:00" },
+        { "day": "Tuesday", "startTime": "08:00", "endTime": "18:00" },
+        { "day": "Wednesday", "startTime": "08:00", "endTime": "12:00" },
+        { "day": "Thursday", "startTime": "08:00", "endTime": "18:00" },
+        { "day": "Friday", "startTime": "08:00", "endTime": "18:00" }
+      ],
+      "capacity": 15,
+      "type": "crèche"
+    },
+    {
+      "name": "Petit Jardin",
+      "latitude": 45.0796,
+      "longitude": -0.3434,
+      "address": "3 Rue de l'Église",
+      "city": "Cavignac",
+      "zip": "33620",
+      "phone": "0557000001",
+      "mail": "jardin@mam.fr",
+      "image": "https://via.placeholder.com/150",
+      "description": "Maison d'assistantes maternelles au coeur de Cavignac.",
+      "schedules": [
+        { "day": "Monday", "startTime": "07:30", "endTime": "18:30" },
+        { "day": "Tuesday", "startTime": "07:30", "endTime": "18:30" },
+        { "day": "Thursday", "startTime": "07:30", "endTime": "18:30" },
+        { "day": "Friday", "startTime": "07:30", "endTime": "18:30" }
+      ],
+      "capacity": 8,
+      "type": "MAM"
+    },
+    {
+      "name": "Crèche Arc-en-Ciel",
+      "latitude": 48.8566,
+      "longitude": 2.3522,
+      "address": "45 Boulevard Saint-Michel",
+      "city": "Paris",
+      "zip": "75005",
+      "phone": "0144000001",
+      "mail": "arcenciel@creche-paris.fr",
+      "image": "https://via.placeholder.com/150",
+      "description": "Une crèche moderne et lumineuse à Paris.",
+      "schedules": [
+        { "day": "Monday", "startTime": "08:00", "endTime": "18:00" },
+        { "day": "Tuesday", "startTime": "08:00", "endTime": "18:00" },
+        { "day": "Wednesday", "startTime": "08:00", "endTime": "18:00" },
+        { "day": "Thursday", "startTime": "08:00", "endTime": "18:00" },
+        { "day": "Friday", "startTime": "08:00", "endTime": "18:00" }
+      ],
+      "capacity": 25,
+      "type": "crèche"
+    },
+    {
+      "name": "Les Petits Explorateurs",
+      "latitude": 48.8606,
+      "longitude": 2.3376,
+      "address": "30 Rue de Rivoli",
+      "city": "Paris",
+      "zip": "75004",
+      "phone": "0144000002",
+      "mail": "explorateurs@mam-paris.fr",
+      "image": "https://via.placeholder.com/150",
+      "description": "Maison d'assistantes maternelles à deux pas du Louvre.",
+      "schedules": [
+        { "day": "Monday", "startTime": "07:30", "endTime": "19:00" },
+        { "day": "Tuesday", "startTime": "07:30", "endTime": "19:00" },
+        { "day": "Wednesday", "startTime": "07:30", "endTime": "19:00" },
+        { "day": "Friday", "startTime": "07:30", "endTime": "19:00" }
+      ],
+      "capacity": 10,
+      "type": "MAM"
+    },
+    {
+      "name": "Mon Petit Monde",
+      "latitude": 48.8534,
+      "longitude": 2.3488,
+      "address": "15 Rue des Archives",
+      "city": "Paris",
+      "zip": "75003",
+      "phone": "0144000003",
+      "mail": "monde@assmat.fr",
+      "image": "https://via.placeholder.com/150",
+      "description": "Assistante maternelle bienveillante et professionnelle.",
+      "schedules": [
+        { "day": "Monday", "startTime": "08:00", "endTime": "18:00" },
+        { "day": "Tuesday", "startTime": "08:00", "endTime": "18:00" },
+        { "day": "Thursday", "startTime": "08:00", "endTime": "18:00" },
+        { "day": "Friday", "startTime": "08:00", "endTime": "18:00" }
+      ],
+      "capacity": 3,
+      "type": "Assistante maternelle"
+    },
+    {
+          "name": "L'Îlot Enchanté",
+          "latitude": 44.836,
+          "longitude": -0.574,
+          "address": "20 Rue des Faussets",
+          "city": "Bordeaux",
+          "zip": "33000",
+          "phone": "0556000004",
+          "mail": "ilot@creche.fr",
+          "image": "https://via.placeholder.com/150",
+          "description": "Un lieu magique pour les enfants en plein coeur de Bordeaux.",
+          "schedules": [
+            { "day": "Monday", "startTime": "08:30", "endTime": "17:30" },
+            { "day": "Tuesday", "startTime": "08:30", "endTime": "17:30" },
+            { "day": "Wednesday", "startTime": "08:30", "endTime": "12:30" },
+            { "day": "Thursday", "startTime": "08:30", "endTime": "17:30" },
+            { "day": "Friday", "startTime": "08:30", "endTime": "17:30" }
+          ],
+          "capacity": 20,
+          "type": "crèche"
+        },
+        {
+          "name": "Les Petits Rêves",
+          "latitude": 45.077,
+          "longitude": -0.345,
+          "address": "5 Avenue de la Gare",
+          "city": "Cavignac",
+          "zip": "33620",
+          "phone": "0557000002",
+          "mail": "reves@mam.fr",
+          "image": "https://via.placeholder.com/150",
+          "description": "Une maison chaleureuse pour vos petits rêves à Cavignac.",
+          "schedules": [
+            { "day": "Monday", "startTime": "07:00", "endTime": "18:00" },
+            { "day": "Tuesday", "startTime": "07:00", "endTime": "18:00" },
+            { "day": "Thursday", "startTime": "07:00", "endTime": "18:00" },
+            { "day": "Friday", "startTime": "07:00", "endTime": "18:00" }
+          ],
+          "capacity": 12,
+          "type": "MAM"
+        },
+        {
+          "name": "Aux Petits Soins",
+          "latitude": 48.857,
+          "longitude": 2.352,
+          "address": "22 Rue de la Lune",
+          "city": "Paris",
+          "zip": "75002",
+          "phone": "0144000004",
+          "mail": "petitsoins@assmat.fr",
+          "image": "https://via.placeholder.com/150",
+          "description": "Assistante maternelle au coeur de Paris avec une approche bienveillante.",
+          "schedules": [
+            { "day": "Monday", "startTime": "09:00", "endTime": "17:00" },
+            { "day": "Tuesday", "startTime": "09:00", "endTime": "17:00" },
+            { "day": "Thursday", "startTime": "09:00", "endTime": "17:00" },
+            { "day": "Friday", "startTime": "09:00", "endTime": "17:00" }
+          ],
+          "capacity": 4,
+          "type": "Assistante maternelle"
+        },
+        {
+          "name": "Les Bambins Joyeux",
+          "latitude": 44.841,
+          "longitude": -0.580,
+          "address": "15 Cours de l'Intendance",
+          "city": "Bordeaux",
+          "zip": "33000",
+          "phone": "0556000005",
+          "mail": "bambins@creche.fr",
+          "image": "https://via.placeholder.com/150",
+          "description": "Une crèche moderne et ludique pour les enfants.",
+          "schedules": [
+            { "day": "Monday", "startTime": "07:30", "endTime": "18:30" },
+            { "day": "Tuesday", "startTime": "07:30", "endTime": "18:30" },
+            { "day": "Wednesday", "startTime": "07:30", "endTime": "12:30" },
+            { "day": "Thursday", "startTime": "07:30", "endTime": "18:30" },
+            { "day": "Friday", "startTime": "07:30", "endTime": "18:30" }
+          ],
+          "capacity": 18,
+          "type": "crèche"
+        },
+        {
+          "name": "Les Lutins de Paris",
+          "latitude": 48.856,
+          "longitude": 2.354,
+          "address": "50 Rue de Paradis",
+          "city": "Paris",
+          "zip": "75010",
+          "phone": "0144000005",
+          "mail": "lutinsparis@mam.fr",
+          "image": "https://via.placeholder.com/150",
+          "description": "Maison d'assistantes maternelles au coeur de Paris.",
+          "schedules": [
+            { "day": "Monday", "startTime": "07:00", "endTime": "18:00" },
+            { "day": "Tuesday", "startTime": "07:00", "endTime": "18:00" },
+            { "day": "Wednesday", "startTime": "07:00", "endTime": "12:00" },
+            { "day": "Thursday", "startTime": "07:00", "endTime": "18:00" },
+            { "day": "Friday", "startTime": "07:00", "endTime": "18:00" }
+          ],
+          "capacity": 10,
+          "type": "MAM"
+        },
+        {
+          "name": "Le Nid Douillet",
+          "latitude": 45.080,
+          "longitude": -0.346,
+          "address": "10 Rue des Acacias",
+          "city": "Cavignac",
+          "zip": "33620",
+          "phone": "0557000003",
+          "mail": "nid@assmat.fr",
+          "image": "https://via.placeholder.com/150",
+          "description": "Un environnement paisible pour vos enfants à Cavignac.",
+          "schedules": [
+            { "day": "Monday", "startTime": "08:00", "endTime": "18:00" },
+            { "day": "Tuesday", "startTime": "08:00", "endTime": "18:00" },
+            { "day": "Thursday", "startTime": "08:00", "endTime": "18:00" },
+            { "day": "Friday", "startTime": "08:00", "endTime": "18:00" }
+          ],
+          "capacity": 6,
+          "type": "Assistante maternelle"
+        },
+        {
+          "name": "Le Petit Royaume",
+          "latitude": 48.858,
+          "longitude": 2.355,
+          "address": "75 Avenue des Champs-Élysées",
+          "city": "Paris",
+          "zip": "75008",
+          "phone": "0144000006",
+          "mail": "royaume@creche.fr",
+          "image": "https://via.placeholder.com/150",
+          "description": "Une crèche royale pour vos petits princes et princesses.",
+          "schedules": [
+            { "day": "Monday", "startTime": "08:00", "endTime": "19:00" },
+            { "day": "Tuesday", "startTime": "08:00", "endTime": "19:00" },
+            { "day": "Thursday", "startTime": "08:00", "endTime": "19:00" },
+            { "day": "Friday", "startTime": "08:00", "endTime": "19:00" }
+          ],
+          "capacity": 25,
+          "type": "Crèche"
+        }
+]
+   
+  

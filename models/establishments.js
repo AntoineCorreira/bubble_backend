@@ -12,13 +12,13 @@ const establishmentSchema = mongoose.Schema({
     longitude: Number,
     address: String,
     city: String,
-    zip: Number,
-    phone: Number,
+    zip: String,
+    phone: String,
     mail: String,
     image: String,
     description: String,
     schedules: [scheduleSchema],
-    capacity: String,
+    capacity: Number,
     type: String,
 });
 
