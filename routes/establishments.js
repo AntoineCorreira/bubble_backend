@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-const Establischment = require('../models/establishments');
+const Establishment = require('../models/establishments');
 
-/* GET home page. */
-router.get('/', async (req, res) => {
-    const establishments = await Establischment.find();
+/* Récupérer tous les établissements*/
+router.get('/all', async (req, res) => {
+    const establishments = await Establishment.find();
     res.json({result: true, establishments})
 });
 
