@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const Establishment = require('../models/establishments'); // Assurez-vous que le chemin est correct
+const Establishment = require('../models/establishments');
 
 // Route pour récupérer tous les établissements (route existante)
 // Cette route renvoie tous les établissements de la base de données
