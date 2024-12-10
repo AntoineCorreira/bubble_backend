@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const childrenSchema = mongoose.Schema({
-    firstname: String,
-    name: String,
+    firstnamechild: String,
+    namechild: String,
     birthdate: Date,
 });
 

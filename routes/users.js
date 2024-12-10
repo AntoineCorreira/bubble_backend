@@ -6,6 +6,9 @@ const User = require('../models/users')
 
 /* Création de la route pour Login-up */
 router.post('/signup', (req, res) =>{
+  if ( !req.body.email || !req.body.password){
+    res.json({ result: false, message: 'Not complette infos'})
+  }
 
   // verifie si un utilisateur n a pas deja été enregistrer
   User.findOne({ email : req.body.email }).then(data => {
@@ -40,12 +43,17 @@ router.post('/signin', (req, res) => {
       res.json({ result: false, error: 'User not found or wrong password' });
     }
   });
+  
 });
 
 
 // création de la route pour ajouté des données utilisateur ( a utilisé pour les screens coordonnée et ma famille)
  router.post('/addData',(req,res)=>{
-  // On recherche un utilisateur grace au token
+   // condition qui verifie que tout les champs sont bien remplit
+  if ( !req.body.name || !req.body.firstname || !req.body.address || !req.body.city || !req.body.zip || !req.body.phone || !req.body.token ){
+    res.json({ result: false, message: 'Not complette infos'})
+  }else{
+      // On ajoute des informations grace au token de l utilisateur
   User.updateOne({ token : req.body.token},
     { //$set opérateur mongoose remplace la valeur d'un champ par la valeur spécifiée.
       $set :{
@@ -71,7 +79,27 @@ router.post('/signin', (req, res) => {
       }
     })
  })
+  }
  })
+ //creation de la route pour ajouté un enfant
 
+ router.post('/addChild', (req,res)=>{
+  // condition qui verifie que tout les champs sont bien remplit
+  if (!req.body.firstnamechild || !req.body.namechild || !req.body.birthdate || !req.body.token){
+   res.json({ result: false, message: 'Not complette infos'})
+  }else{
+    User.updateOne({ token : req.body.token},
+      {  // $push operateur mongoose pour push un nouveau enfant dans le tableau du sous document
+         $push: { children: { firstnamechild: req.body.firstnamechild, namechild: req.body.namechild, birthdate: req.body.birthdate } }  
+      }
+    )
+    .then(() => {
+      res.json({ result: true, message: 'Enfant ajouté avec succès' });
+    }) 
+    .catch(err => {
+      res.status(500).json({ result: false, error: err.message });
+    });
+  }
+ })
 
 module.exports = router;
