@@ -50,7 +50,7 @@ router.post('/signin', (req, res) => {
 // création de la route pour ajouté des données utilisateur ( a utilisé pour les screens coordonnée et ma famille)
  router.post('/addData',(req,res)=>{
    // condition qui verifie que tout les champs sont bien remplit
-  if ( !req.body.name || !req.body.firstname || !req.body.address || !req.body.city || !req.body.zip || !req.body.phone || !req.body.token ){
+  if ( !req.body.name || !req.body.firstname || !req.body.address || !req.body.city || !req.body.zip || !req.body.phone  ){
     res.json({ result: false, message: 'Not complette infos'})
   }else{
       // On ajoute des informations grace au token de l utilisateur

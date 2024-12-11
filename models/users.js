@@ -15,8 +15,8 @@ const userSchema = mongoose.Schema({
     firstname: String,
     address: String,
     city: String,
-    zip: Number,
-    phone: Number,
+    zip: String,
+    phone: String,
     type: String,
     children: [childrenSchema],
 });
