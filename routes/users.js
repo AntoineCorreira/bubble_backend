@@ -102,4 +102,14 @@ router.post('/signin', (req, res) => {
   }
  })
 
+ // route pour récuperer nom des enfants 
+ router.get('/children', (req, res) => {
+  User.find({}).select('children').then(users => {
+    const children = users.flatMap(user => user.children); // Extraire tous les enfants
+    res.json({ children });
+  }).catch(error => {
+    res.status(500).json({ error: 'An error occurred while retrieving children.' });
+  });
+});
+
 module.exports = router;

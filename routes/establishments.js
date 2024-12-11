@@ -1,42 +1,63 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const Establishment = require('../models/establishments');
 
-// Route pour récupérer tous les établissements (route existante)
-// Cette route renvoie tous les établissements de la base de données
 router.get('/all', async (req, res) => {
   const establishments = await Establishment.find();
-  res.json({result: true, establishments: establishments})
+  res.json({ result: true, establishments: establishments });
 });
 
-// Nouvelle route pour récupérer les établissements avec des critères de recherche
-// Cette route permet de filtrer les établissements en fonction de critères de recherche spécifiques :
-// - location : filtre par ville
-// - period : filtre par période (dates)
-// - type : filtre par type d'établissement
 router.get('/', async (req, res) => {
   try {
-    const { location, period, type } = req.query; // Extraction des critères de recherche depuis les paramètres de requête
+    const { city, period, type } = req.query;
+    console.log('Critères de recherche:', { city, period, type });
 
     let query = {};
-    if (location) {
-      query.city = new RegExp(location, 'i'); // Recherche insensible à la casse par ville
+    if (city) {
+      query.city = new RegExp(city, 'i');
     }
     if (type) {
-      query.type = type; // Filtrage par type d'établissement
+      query.type = new RegExp(type, 'i');
     }
     if (period) {
       const [startDate, endDate] = period.split(' - ');
-      // Filtrage par période : recherche des dates incluses dans la période donnée
-      query.schedules = { $elemMatch: { date: { $gte: new Date(startDate), $lte: new Date(endDate) } } };
+      query.schedules = { $elemMatch: { day: { $gte: new Date(startDate), $lte: new Date(endDate) } } };
     }
 
-    // Recherche des établissements correspondant aux critères de recherche
     const establishments = await Establishment.find(query);
-    res.json({establishments}); // Envoi des établissements filtrés en réponse
+    console.log('Requête MongoDB:', query);
+    console.log('Résultats de la recherche:', establishments);
+    res.json({ establishments });
   } catch (error) {
-    // Gestion des erreurs lors de la récupération des établissements
+    console.error('Erreur lors de la récupération des établissements:', error);
     res.status(500).json({ error: 'An error occurred while retrieving establishments.' });
+  }
+});
+
+router.get('/type', async (req, res) => {
+  try {
+    const types = await Establishment.distinct('type');
+    res.json(types);
+  } catch (error) {
+    res.status(500).json({ error: 'An error occurred while retrieving types of care.' });
+  }
+});
+
+router.get('/city', async (req, res) => {
+  try {
+    const cities = await Establishment.distinct('city');
+    res.json(cities);
+  } catch (error) {
+    res.status(500).json({ error: 'An error occurred while retrieving cities.' });
+  }
+});
+
+router.get('/period', async (req, res) => {
+  try {
+    const periods = await Establishment.distinct('schedules.day');
+    res.json(periods);
+  } catch (error) {
+    res.status(500).json({ error: 'An error occurred while retrieving periods.' });
   }
 });
 
