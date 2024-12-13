@@ -102,14 +102,20 @@ router.post('/signin', (req, res) => {
   }
  })
 
- // route pour récuperer nom des enfants 
- router.get('/children', (req, res) => {
-  User.find({}).select('children').then(users => {
-    const children = users.flatMap(user => user.children); // Extraire tous les enfants
-    res.json({ children });
+
+router.get('/children', (req, res) => {
+  const userId = req.query.userId; // Utiliser l'ID de l'utilisateur depuis les paramètres de requête
+
+  User.findById(userId).select('children').then(user => {
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+    res.json(user.children); // Renvoie uniquement les enfants de l'utilisateur connecté
   }).catch(error => {
+    console.error('Erreur lors de la récupération des enfants:', error);
     res.status(500).json({ error: 'An error occurred while retrieving children.' });
   });
 });
+
 
 module.exports = router;
