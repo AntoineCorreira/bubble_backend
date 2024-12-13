@@ -1,290 +1,578 @@
 [
-    {
-      "name": "Petits Pas Bordeaux",
-      "latitude": 44.8378,
-      "longitude": -0.5792,
-      "address": "12 Rue Saint-Catherine",
-      "city": "Bordeaux",
-      "zip": "33000",
-      "phone": "0556000001",
-      "mail": "contact@petitspas-bordeaux.fr",
-      "image": "https://via.placeholder.com/150",
-      "description": "Une crèche accueillante pour les petits Bordelais.",
-      "schedules": [
-        { "day": "Monday", "startTime": "08:00", "endTime": "18:00" },
-        { "day": "Tuesday", "startTime": "08:00", "endTime": "18:00" },
-        { "day": "Wednesday", "startTime": "08:00", "endTime": "18:00" },
-        { "day": "Thursday", "startTime": "08:00", "endTime": "18:00" },
-        { "day": "Friday", "startTime": "08:00", "endTime": "18:00" }
-      ],
-      "capacity": 20,
-      "type": "crèche"
-    },
-    {
-      "name": "MAM les Lutins",
-      "latitude": 44.8376,
-      "longitude": -0.5711,
-      "address": "25 Avenue Thiers",
-      "city": "Bordeaux",
-      "zip": "33100",
-      "phone": "0556000002",
-      "mail": "lutins@mam.fr",
-      "image": "https://via.placeholder.com/150",
-      "description": "Maison d'assistantes maternelles conviviale.",
-      "schedules": [
-        { "day": "Monday", "startTime": "07:30", "endTime": "19:00" },
-        { "day": "Tuesday", "startTime": "07:30", "endTime": "19:00" },
-        { "day": "Thursday", "startTime": "07:30", "endTime": "19:00" },
-        { "day": "Friday", "startTime": "07:30", "endTime": "19:00" }
-      ],
-      "capacity": 10,
-      "type": "MAM"
-    },
-    {
-      "name": "Cocon d'Enfance",
-      "latitude": 44.8371,
-      "longitude": -0.5764,
-      "address": "8 Rue des Ayres",
-      "city": "Bordeaux",
-      "zip": "33000",
-      "phone": "0556000003",
-      "mail": "cocon@creche.fr",
-      "image": "https://via.placeholder.com/150",
-      "description": "Un environnement chaleureux pour vos enfants.",
-      "schedules": [
-        { "day": "Monday", "startTime": "08:00", "endTime": "18:00" },
-        { "day": "Tuesday", "startTime": "08:00", "endTime": "18:00" },
-        { "day": "Wednesday", "startTime": "08:00", "endTime": "12:00" },
-        { "day": "Thursday", "startTime": "08:00", "endTime": "18:00" },
-        { "day": "Friday", "startTime": "08:00", "endTime": "18:00" }
-      ],
-      "capacity": 15,
-      "type": "crèche"
-    },
-    {
-      "name": "Petit Jardin",
-      "latitude": 45.0796,
-      "longitude": -0.3434,
-      "address": "3 Rue de l'Église",
-      "city": "Cavignac",
-      "zip": "33620",
-      "phone": "0557000001",
-      "mail": "jardin@mam.fr",
-      "image": "https://via.placeholder.com/150",
-      "description": "Maison d'assistantes maternelles au coeur de Cavignac.",
-      "schedules": [
-        { "day": "Monday", "startTime": "07:30", "endTime": "18:30" },
-        { "day": "Tuesday", "startTime": "07:30", "endTime": "18:30" },
-        { "day": "Thursday", "startTime": "07:30", "endTime": "18:30" },
-        { "day": "Friday", "startTime": "07:30", "endTime": "18:30" }
-      ],
-      "capacity": 8,
-      "type": "MAM"
-    },
-    {
-      "name": "Crèche Arc-en-Ciel",
-      "latitude": 48.8566,
-      "longitude": 2.3522,
-      "address": "45 Boulevard Saint-Michel",
-      "city": "Paris",
-      "zip": "75005",
-      "phone": "0144000001",
-      "mail": "arcenciel@creche-paris.fr",
-      "image": "https://via.placeholder.com/150",
-      "description": "Une crèche moderne et lumineuse à Paris.",
-      "schedules": [
-        { "day": "Monday", "startTime": "08:00", "endTime": "18:00" },
-        { "day": "Tuesday", "startTime": "08:00", "endTime": "18:00" },
-        { "day": "Wednesday", "startTime": "08:00", "endTime": "18:00" },
-        { "day": "Thursday", "startTime": "08:00", "endTime": "18:00" },
-        { "day": "Friday", "startTime": "08:00", "endTime": "18:00" }
-      ],
-      "capacity": 25,
-      "type": "crèche"
-    },
-    {
-      "name": "Les Petits Explorateurs",
-      "latitude": 48.8606,
-      "longitude": 2.3376,
-      "address": "30 Rue de Rivoli",
-      "city": "Paris",
-      "zip": "75004",
-      "phone": "0144000002",
-      "mail": "explorateurs@mam-paris.fr",
-      "image": "https://via.placeholder.com/150",
-      "description": "Maison d'assistantes maternelles à deux pas du Louvre.",
-      "schedules": [
-        { "day": "Monday", "startTime": "07:30", "endTime": "19:00" },
-        { "day": "Tuesday", "startTime": "07:30", "endTime": "19:00" },
-        { "day": "Wednesday", "startTime": "07:30", "endTime": "19:00" },
-        { "day": "Friday", "startTime": "07:30", "endTime": "19:00" }
-      ],
-      "capacity": 10,
-      "type": "MAM"
-    },
-    {
-      "name": "Mon Petit Monde",
-      "latitude": 48.8534,
-      "longitude": 2.3488,
-      "address": "15 Rue des Archives",
-      "city": "Paris",
-      "zip": "75003",
-      "phone": "0144000003",
-      "mail": "monde@assmat.fr",
-      "image": "https://via.placeholder.com/150",
-      "description": "Assistante maternelle bienveillante et professionnelle.",
-      "schedules": [
-        { "day": "Monday", "startTime": "08:00", "endTime": "18:00" },
-        { "day": "Tuesday", "startTime": "08:00", "endTime": "18:00" },
-        { "day": "Thursday", "startTime": "08:00", "endTime": "18:00" },
-        { "day": "Friday", "startTime": "08:00", "endTime": "18:00" }
-      ],
-      "capacity": 3,
-      "type": "Assistante maternelle"
-    },
-    {
-          "name": "L'Îlot Enchanté",
-          "latitude": 44.836,
-          "longitude": -0.574,
-          "address": "20 Rue des Faussets",
-          "city": "Bordeaux",
-          "zip": "33000",
-          "phone": "0556000004",
-          "mail": "ilot@creche.fr",
-          "image": "https://via.placeholder.com/150",
-          "description": "Un lieu magique pour les enfants en plein coeur de Bordeaux.",
-          "schedules": [
-            { "day": "Monday", "startTime": "08:30", "endTime": "17:30" },
-            { "day": "Tuesday", "startTime": "08:30", "endTime": "17:30" },
-            { "day": "Wednesday", "startTime": "08:30", "endTime": "12:30" },
-            { "day": "Thursday", "startTime": "08:30", "endTime": "17:30" },
-            { "day": "Friday", "startTime": "08:30", "endTime": "17:30" }
-          ],
-          "capacity": 20,
-          "type": "crèche"
-        },
-        {
-          "name": "Les Petits Rêves",
-          "latitude": 45.077,
-          "longitude": -0.345,
-          "address": "5 Avenue de la Gare",
-          "city": "Cavignac",
-          "zip": "33620",
-          "phone": "0557000002",
-          "mail": "reves@mam.fr",
-          "image": "https://via.placeholder.com/150",
-          "description": "Une maison chaleureuse pour vos petits rêves à Cavignac.",
-          "schedules": [
-            { "day": "Monday", "startTime": "07:00", "endTime": "18:00" },
-            { "day": "Tuesday", "startTime": "07:00", "endTime": "18:00" },
-            { "day": "Thursday", "startTime": "07:00", "endTime": "18:00" },
-            { "day": "Friday", "startTime": "07:00", "endTime": "18:00" }
-          ],
-          "capacity": 12,
-          "type": "MAM"
-        },
-        {
-          "name": "Aux Petits Soins",
-          "latitude": 48.857,
-          "longitude": 2.352,
-          "address": "22 Rue de la Lune",
-          "city": "Paris",
-          "zip": "75002",
-          "phone": "0144000004",
-          "mail": "petitsoins@assmat.fr",
-          "image": "https://via.placeholder.com/150",
-          "description": "Assistante maternelle au coeur de Paris avec une approche bienveillante.",
-          "schedules": [
-            { "day": "Monday", "startTime": "09:00", "endTime": "17:00" },
-            { "day": "Tuesday", "startTime": "09:00", "endTime": "17:00" },
-            { "day": "Thursday", "startTime": "09:00", "endTime": "17:00" },
-            { "day": "Friday", "startTime": "09:00", "endTime": "17:00" }
-          ],
-          "capacity": 4,
-          "type": "Assistante maternelle"
-        },
-        {
-          "name": "Les Bambins Joyeux",
-          "latitude": 44.841,
-          "longitude": -0.580,
-          "address": "15 Cours de l'Intendance",
-          "city": "Bordeaux",
-          "zip": "33000",
-          "phone": "0556000005",
-          "mail": "bambins@creche.fr",
-          "image": "https://via.placeholder.com/150",
-          "description": "Une crèche moderne et ludique pour les enfants.",
-          "schedules": [
-            { "day": "Monday", "startTime": "07:30", "endTime": "18:30" },
-            { "day": "Tuesday", "startTime": "07:30", "endTime": "18:30" },
-            { "day": "Wednesday", "startTime": "07:30", "endTime": "12:30" },
-            { "day": "Thursday", "startTime": "07:30", "endTime": "18:30" },
-            { "day": "Friday", "startTime": "07:30", "endTime": "18:30" }
-          ],
-          "capacity": 18,
-          "type": "crèche"
-        },
-        {
-          "name": "Les Lutins de Paris",
-          "latitude": 48.856,
-          "longitude": 2.354,
-          "address": "50 Rue de Paradis",
-          "city": "Paris",
-          "zip": "75010",
-          "phone": "0144000005",
-          "mail": "lutinsparis@mam.fr",
-          "image": "https://via.placeholder.com/150",
-          "description": "Maison d'assistantes maternelles au coeur de Paris.",
-          "schedules": [
-            { "day": "Monday", "startTime": "07:00", "endTime": "18:00" },
-            { "day": "Tuesday", "startTime": "07:00", "endTime": "18:00" },
-            { "day": "Wednesday", "startTime": "07:00", "endTime": "12:00" },
-            { "day": "Thursday", "startTime": "07:00", "endTime": "18:00" },
-            { "day": "Friday", "startTime": "07:00", "endTime": "18:00" }
-          ],
-          "capacity": 10,
-          "type": "MAM"
-        },
-        {
-          "name": "Le Nid Douillet",
-          "latitude": 45.080,
-          "longitude": -0.346,
-          "address": "10 Rue des Acacias",
-          "city": "Cavignac",
-          "zip": "33620",
-          "phone": "0557000003",
-          "mail": "nid@assmat.fr",
-          "image": "https://via.placeholder.com/150",
-          "description": "Un environnement paisible pour vos enfants à Cavignac.",
-          "schedules": [
-            { "day": "Monday", "startTime": "08:00", "endTime": "18:00" },
-            { "day": "Tuesday", "startTime": "08:00", "endTime": "18:00" },
-            { "day": "Thursday", "startTime": "08:00", "endTime": "18:00" },
-            { "day": "Friday", "startTime": "08:00", "endTime": "18:00" }
-          ],
-          "capacity": 6,
-          "type": "Assistante maternelle"
-        },
-        {
-          "name": "Le Petit Royaume",
-          "latitude": 48.858,
-          "longitude": 2.355,
-          "address": "75 Avenue des Champs-Élysées",
-          "city": "Paris",
-          "zip": "75008",
-          "phone": "0144000006",
-          "mail": "royaume@creche.fr",
-          "image": "https://via.placeholder.com/150",
-          "description": "Une crèche royale pour vos petits princes et princesses.",
-          "schedules": [
-            { "day": "Monday", "startTime": "08:00", "endTime": "19:00" },
-            { "day": "Tuesday", "startTime": "08:00", "endTime": "19:00" },
-            { "day": "Thursday", "startTime": "08:00", "endTime": "19:00" },
-            { "day": "Friday", "startTime": "08:00", "endTime": "19:00" }
-          ],
-          "capacity": 25,
-          "type": "Crèche"
-        }
+  {
+    "name": "Crèche Bordeaux 1",
+    "latitude": 44.8378,
+    "longitude": -0.5792,
+    "address": "10 Rue du Parc Bordelais",
+    "city": "Bordeaux",
+    "zip": "33000",
+    "phone": "0556332456",
+    "mail": "contact@crechebordeaux1.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Crèche avec des programmes éducatifs adaptés à chaque tranche d'âge.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mardi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mercredi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Jeudi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Vendredi", "startTime": "08:00", "endTime": "18:00" }
+    ],
+    "capacity": 50,
+    "type": "Crèche"
+  },
+  {
+    "name": "La MAM des Petits Bordelais",
+    "latitude": 44.8397,
+    "longitude": -0.5759,
+    "address": "35 Rue de la Croix de Mission",
+    "city": "Bordeaux",
+    "zip": "33000",
+    "phone": "0556201234",
+    "mail": "mam@petitsbordelais.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Maison d'Assistants Maternels, un accueil personnalisé pour chaque enfant.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:30", "endTime": "18:30" },
+      { "day": "Mardi", "startTime": "08:30", "endTime": "18:30" },
+      { "day": "Mercredi", "startTime": "08:30", "endTime": "18:30" },
+      { "day": "Jeudi", "startTime": "08:30", "endTime": "18:30" },
+      { "day": "Vendredi", "startTime": "08:30", "endTime": "18:30" }
+    ],
+    "capacity": 20,
+    "type": "MAM"
+  },
+  {
+    "name": "Garderie des Anges Bordeaux",
+    "latitude": 44.8448,
+    "longitude": -0.5745,
+    "address": "50 Avenue de la République",
+    "city": "Bordeaux",
+    "zip": "33000",
+    "phone": "0556932345",
+    "mail": "contact@garderieangdesbordeaux.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Garderie accueillante et dynamique avec des activités enrichissantes.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mardi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mercredi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Jeudi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Vendredi", "startTime": "08:00", "endTime": "18:00" }
+    ],
+    "capacity": 40,
+    "type": "Garderie"
+  },
+  {
+    "name": "Assistante Maternelle Bordeaux 3",
+    "latitude": 44.8305,
+    "longitude": -0.5749,
+    "address": "17 Rue de la Bastide",
+    "city": "Bordeaux",
+    "zip": "33100",
+    "phone": "0556867354",
+    "mail": "assmatbordeaux3@free.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Assistante maternelle avec un environnement calme et bienveillant.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mardi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Jeudi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Vendredi", "startTime": "08:00", "endTime": "18:00" }
+    ],
+    "capacity": 4,
+    "type": "Assistante Maternelle"
+  },
+  {
+    "name": "Crèche du Parc Bordelais",
+    "latitude": 44.8422,
+    "longitude": -0.5719,
+    "address": "40 Rue du Parc Bordelais",
+    "city": "Bordeaux",
+    "zip": "33000",
+    "phone": "0556212345",
+    "mail": "contact@crecheparcbordelais.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Crèche moderne avec des équipements adaptés à chaque âge.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mardi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mercredi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Jeudi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Vendredi", "startTime": "08:00", "endTime": "18:00" }
+    ],
+    "capacity": 60,
+    "type": "Crèche"
+  },
+  {
+    "name": "Crèche Paris 1",
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "address": "12 Rue de la Paix",
+    "city": "Paris",
+    "zip": "75002",
+    "phone": "0145678901",
+    "mail": "contact@crecheparis1.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Crèche moderne offrant des soins et une éducation adaptés.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mardi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mercredi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Jeudi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Vendredi", "startTime": "08:00", "endTime": "18:00" }
+    ],
+    "capacity": 40,
+    "type": "Crèche"
+  },
+  {
+    "name": "MAM de Paris Centre",
+    "latitude": 48.8600,
+    "longitude": 2.3333,
+    "address": "8 Rue de Rivoli",
+    "city": "Paris",
+    "zip": "75001",
+    "phone": "0145689202",
+    "mail": "mam@pariscentre.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Maison d'Assistants Maternels pour un accueil familial.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:30", "endTime": "18:30" },
+      { "day": "Mardi", "startTime": "08:30", "endTime": "18:30" },
+      { "day": "Mercredi", "startTime": "08:30", "endTime": "18:30" },
+      { "day": "Jeudi", "startTime": "08:30", "endTime": "18:30" },
+      { "day": "Vendredi", "startTime": "08:30", "endTime": "18:30" }
+    ],
+    "capacity": 15,
+    "type": "MAM"
+  },
+  {
+    "name": "Garderie Paris 5",
+    "latitude": 48.8611,
+    "longitude": 2.3469,
+    "address": "14 Avenue de l'Opéra",
+    "city": "Paris",
+    "zip": "75001",
+    "phone": "0145623434",
+    "mail": "contact@garderieparis5.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Garderie avec des activités ludiques pour les petits.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mardi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mercredi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Jeudi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Vendredi", "startTime": "08:00", "endTime": "18:00" }
+    ],
+    "capacity": 30,
+    "type": "Garderie"
+  },
+  {
+    "name": "Assistante Maternelle Paris 3",
+    "latitude": 48.8648,
+    "longitude": 2.3222,
+    "address": "20 Rue de la Concorde",
+    "city": "Paris",
+    "zip": "75008",
+    "phone": "0145367876",
+    "mail": "assmatparis3@free.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Assistante maternelle offrant un accueil chaleureux et personnalisé.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mardi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Jeudi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Vendredi", "startTime": "08:00", "endTime": "18:00" }
+    ],
+    "capacity": 4,
+    "type": "Assistante Maternelle"
+  },
+  {
+    "name": "Crèche des Champs-Élysées",
+    "latitude": 48.8700,
+    "longitude": 2.3087,
+    "address": "5 Avenue Montaigne",
+    "city": "Paris",
+    "zip": "75008",
+    "phone": "0145297689",
+    "mail": "contact@crechechampselysees.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Crèche moderne située près des Champs-Élysées, accueillant les enfants dans un cadre sécurisé.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mardi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mercredi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Jeudi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Vendredi", "startTime": "08:00", "endTime": "18:00" }
+    ],
+    "capacity": 60,
+    "type": "Crèche"
+  },
+  {
+    "name": "Crèche Bordeaux 1",
+    "latitude": 44.8378,
+    "longitude": -0.5792,
+    "address": "10 Rue Sainte-Catherine",
+    "city": "Bordeaux",
+    "zip": "33000",
+    "phone": "0556789012",
+    "mail": "contact@crechebordeaux1.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Crèche moderne accueillant les enfants dès 3 mois.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mardi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mercredi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Jeudi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Vendredi", "startTime": "08:00", "endTime": "18:00" }
+    ],
+    "capacity": 50,
+    "type": "Crèche"
+  },
+  {
+    "name": "MAM Bordeaux Centre",
+    "latitude": 44.8396,
+    "longitude": -0.5728,
+    "address": "15 Place des Quinconces",
+    "city": "Bordeaux",
+    "zip": "33000",
+    "phone": "0556812345",
+    "mail": "mam@bordeauxcentre.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Maison d'Assistants Maternels offrant un cadre familial.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:30", "endTime": "18:30" },
+      { "day": "Mardi", "startTime": "08:30", "endTime": "18:30" },
+      { "day": "Mercredi", "startTime": "08:30", "endTime": "18:30" },
+      { "day": "Jeudi", "startTime": "08:30", "endTime": "18:30" },
+      { "day": "Vendredi", "startTime": "08:30", "endTime": "18:30" }
+    ],
+    "capacity": 20,
+    "type": "MAM"
+  },
+  {
+    "name": "Garderie Bordeaux 3",
+    "latitude": 44.8439,
+    "longitude": -0.5742,
+    "address": "3 Rue de la Porte Dijeaux",
+    "city": "Bordeaux",
+    "zip": "33000",
+    "phone": "0556856743",
+    "mail": "contact@garderiebordeaux3.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Garderie avec des activités éducatives et créatives.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mardi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mercredi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Jeudi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Vendredi", "startTime": "08:00", "endTime": "18:00" }
+    ],
+    "capacity": 25,
+    "type": "Garderie"
+  },
+  {
+    "name": "Assistante Maternelle Bordeaux 2",
+    "latitude": 44.8547,
+    "longitude": -0.5725,
+    "address": "21 Rue du Palais Rohan",
+    "city": "Bordeaux",
+    "zip": "33000",
+    "phone": "0556907865",
+    "mail": "assmatbordeaux2@outlook.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Assistante maternelle accueillant les enfants dans un environnement calme et sécurisé.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mardi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Jeudi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Vendredi", "startTime": "08:00", "endTime": "18:00" }
+    ],
+    "capacity": 4,
+    "type": "Assistante Maternelle"
+  },
+  {
+    "name": "Crèche des Chartrons",
+    "latitude": 44.8677,
+    "longitude": -0.5726,
+    "address": "2 Rue de la Maison de la Radio",
+    "city": "Bordeaux",
+    "zip": "33000",
+    "phone": "0556821543",
+    "mail": "contact@crechechartrons.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Crèche innovante avec une approche éducative basée sur le jeu.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mardi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mercredi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Jeudi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Vendredi", "startTime": "08:00", "endTime": "18:00" }
+    ],
+    "capacity": 40,
+    "type": "Crèche"
+  },
+  {
+    "name": "Crèche Marseille 1",
+    "latitude": 43.2965,
+    "longitude": 5.3698,
+    "address": "12 Rue de la République",
+    "city": "Marseille",
+    "zip": "13001",
+    "phone": "0491234567",
+    "mail": "contact@crechemarseille1.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Crèche moderne avec une approche éducative respectueuse de l'enfant.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mardi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mercredi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Jeudi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Vendredi", "startTime": "08:00", "endTime": "18:00" }
+    ],
+    "capacity": 60,
+    "type": "Crèche"
+  },
+  {
+    "name": "MAM Marseille Sud",
+    "latitude": 43.2557,
+    "longitude": 5.3775,
+    "address": "20 Avenue des Olives",
+    "city": "Marseille",
+    "zip": "13013",
+    "phone": "0498712345",
+    "mail": "mam@marseillesud.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Maison d'Assistants Maternels avec un environnement familial et convivial.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:30", "endTime": "18:30" },
+      { "day": "Mardi", "startTime": "08:30", "endTime": "18:30" },
+      { "day": "Mercredi", "startTime": "08:30", "endTime": "18:30" },
+      { "day": "Jeudi", "startTime": "08:30", "endTime": "18:30" },
+      { "day": "Vendredi", "startTime": "08:30", "endTime": "18:30" }
+    ],
+    "capacity": 15,
+    "type": "MAM"
+  },
+  {
+    "name": "Garderie Marseille Est",
+    "latitude": 43.3100,
+    "longitude": 5.4165,
+    "address": "8 Rue de la Joliette",
+    "city": "Marseille",
+    "zip": "13002",
+    "phone": "0498765432",
+    "mail": "contact@garderiebmestre.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Garderie accueillant les enfants de 2 à 6 ans, avec une pédagogie ludique.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mardi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mercredi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Jeudi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Vendredi", "startTime": "08:00", "endTime": "18:00" }
+    ],
+    "capacity": 30,
+    "type": "Garderie"
+  },
+  {
+    "name": "Assistante Maternelle Marseille 3",
+    "latitude": 43.2781,
+    "longitude": 5.3705,
+    "address": "25 Boulevard de la Libération",
+    "city": "Marseille",
+    "zip": "13001",
+    "phone": "0498901234",
+    "mail": "assmatmarseille3@outlook.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Assistante maternelle agréée, accueillant les enfants à son domicile.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mardi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Jeudi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Vendredi", "startTime": "08:00", "endTime": "18:00" }
+    ],
+    "capacity": 4,
+    "type": "Assistante Maternelle"
+  },
+  {
+    "name": "Crèche du Vieux-Port",
+    "latitude": 43.2968,
+    "longitude": 5.3700,
+    "address": "6 Quai des Belges",
+    "city": "Marseille",
+    "zip": "13001",
+    "phone": "0498923456",
+    "mail": "contact@crechevieuxport.fr",
+    "image": "https://via.placeholder.com/150",
+    "gallery": [
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" },
+      { "image": "https://via.placeholder.com/150" }
+    ],
+    "description": "Crèche créative et inclusive, ouverte aux enfants de tous horizons.",
+    "schedules": [
+      { "day": "Lundi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mardi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Mercredi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Jeudi", "startTime": "08:00", "endTime": "18:00" },
+      { "day": "Vendredi", "startTime": "08:00", "endTime": "18:00" }
+    ],
+    "capacity": 45,
+    "type": "Crèche"
+  }
 ]
-   
-  

@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
 
 const reservationSchema = mongoose.Schema({
-    startDate: Date,
-    endDate: Date,
+    startDate: String,
+    endDate: String,
     parent: { type: mongoose.Schema.Types.ObjectId, ref: 'users' },
-    children: [String],
-    establishment: { type: mongoose.Schema.Types.ObjectId, ref: 'establishments' }
+    child: String,
+    establishment: { type: mongoose.Schema.Types.ObjectId, ref: 'establishments' },
+    status: String,
 });
 
 const Reservation = mongoose.model('reservations', reservationSchema);

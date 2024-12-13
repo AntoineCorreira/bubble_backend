@@ -6,6 +6,10 @@ const scheduleSchema = mongoose.Schema({
     endTime: String,
 });
 
+const gallerySchema = mongoose.Schema({
+    image: String,
+});
+
 const establishmentSchema = mongoose.Schema({
     name: String,
     latitude: Number,
@@ -16,12 +20,13 @@ const establishmentSchema = mongoose.Schema({
     phone: String,
     mail: String,
     image: String,
+    gallery: [gallerySchema],
     description: String,
     schedules: [scheduleSchema],
     capacity: Number,
     type: String,
 });
 
-const Establischment = mongoose.model('establishments', establishmentSchema);
+const Establishment = mongoose.model('establishments', establishmentSchema);
 
-module.exports = Establischment;
+module.exports = Establishment;
