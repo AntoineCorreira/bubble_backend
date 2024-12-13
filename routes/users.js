@@ -50,51 +50,56 @@ router.post('/signin', (req, res) => {
 // création de la route pour ajouté des données utilisateur ( a utilisé pour les screens coordonnée et ma famille)
  router.post('/addData',(req,res)=>{
    // condition qui verifie que tout les champs sont bien remplit
-  if ( !req.body.name || !req.body.firstname || !req.body.address || !req.body.city || !req.body.zip || !req.body.phone  ){
+  if ( !req.body.name || !req.body.firstname || !req.body.address || !req.body.city || !req.body.zip || !req.body.phone || !req.body.token ){
     res.json({ result: false, message: 'Not complette infos'})
   }else{
       // On ajoute des informations grace au token de l utilisateur
-  User.updateOne({ token : req.body.token},
-    { //$set opérateur mongoose remplace la valeur d'un champ par la valeur spécifiée.
-      $set :{
-        civility: req.body.civility,
-        name: req.body.name,
-        firstname: req.body.firstname,
-        address: req.body.address,
-        city: req.body.city,
-        zip: req.body.zip,
-        phone: req.body.phone,
-        type: req.body.type,
-      }
-    }
-  )
-  // utilisation d un findOne pour afficher toutes les données utilisateur si token existe.
-  .then(()=>{
-    User.findOne({token : req.body.token})
-    .then(dataUser=>{
-      if(dataUser){
-        res.json({ result: true, dataBdd : dataUser })
-      }else{
-        res.json({ result: false, message : 'token no exists' })
-      }
-    })
- })
+      User.findOneAndUpdate(
+        { token: req.body.token },
+        {
+          $set: {
+            civility: req.body.civility,
+            name: req.body.name,
+            firstname: req.body.firstname,
+            adress: req.body.adress,
+            city: req.body.city,
+            zip: req.body.zip,
+            phone: req.body.phone,
+            type: req.body.type,
+          },
+        },
+        { new: true } // Renvoie l'utilisateur mis à jour
+      )
+        .then((dataUser) => {
+          if (dataUser) {
+            res.json({ result: true, dataBdd: dataUser });
+          } else {
+            res.json({ result: false, message: 'User not found' });
+          }
+        })
+        .catch((error) => {
+          res.status(500).json({ result: false, message: 'Update error', error });
+        });
   }
  })
  //creation de la route pour ajouté un enfant
 
  router.post('/addChild', (req,res)=>{
+  console.log(req.body.token)
   // condition qui verifie que tout les champs sont bien remplit
   if (!req.body.firstnamechild || !req.body.namechild || !req.body.birthdate || !req.body.token){
    res.json({ result: false, message: 'Not complette infos'})
   }else{
-    User.updateOne({ token : req.body.token},
+    User.findOneAndUpdate({ token : req.body.token},
       {  // $push operateur mongoose pour push un nouveau enfant dans le tableau du sous document
-         $push: { children: { firstnamechild: req.body.firstnamechild, namechild: req.body.namechild, birthdate: req.body.birthdate } }  
-      }
+         $push: { children: { firstnamechild: req.body.firstnamechild, namechild: req.body.namechild, birthdate: req.body.birthdate } }, 
+         type: req.body.type 
+      },
     )
     .then(() => {
-      res.json({ result: true, message: 'Enfant ajouté avec succès' });
+      User.findOne().then(data=>{
+        res.json({ result: true, message: 'Enfant ajouté avec succès', donnee : data});
+      })
     }) 
     .catch(err => {
       res.status(500).json({ result: false, error: err.message });
@@ -102,14 +107,24 @@ router.post('/signin', (req, res) => {
   }
  })
 
- // route pour récuperer nom des enfants 
- router.get('/children', (req, res) => {
-  User.find({}).select('children').then(users => {
-    const children = users.flatMap(user => user.children); // Extraire tous les enfants
-    res.json({ children });
-  }).catch(error => {
-    res.status(500).json({ error: 'An error occurred while retrieving children.' });
-  });
-});
+
+ //creation d une route get pour recuperer toutes les informations utilisateur a sa reconnexion
+ router.get('/getUser', (req, res) => {
+  const { token } = req.body;
+  if (!token) {
+    return res.json({ result: false, message: 'Token is required' });
+  }
+  User.findOne({ token })
+    .then((dataUser) => {
+      if (dataUser) {
+        res.json({ result: true, dataBdd: dataUser });
+      } else {
+        res.json({ result: false, message: 'User not found' });
+      }
+    })
+    .catch((error) => {
+      res.status(500).json({ result: false, message: 'Error retrieving user', error });
+    });
+}); 
 
 module.exports = router;
