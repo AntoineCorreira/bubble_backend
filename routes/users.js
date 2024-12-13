@@ -61,7 +61,7 @@ router.post('/signin', (req, res) => {
             civility: req.body.civility,
             name: req.body.name,
             firstname: req.body.firstname,
-            adress: req.body.adress,
+            address: req.body.address,
             city: req.body.city,
             zip: req.body.zip,
             phone: req.body.phone,
@@ -97,7 +97,7 @@ router.post('/signin', (req, res) => {
       },
     )
     .then(() => {
-      User.findOne().then(data=>{
+      User.findOne({token : req.body.token}).then(data=>{
         res.json({ result: true, message: 'Enfant ajouté avec succès', donnee : data});
       })
     }) 
