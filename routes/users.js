@@ -34,16 +34,31 @@ router.post('/signup', (req, res) =>{
 
 //création de la route pour ce connecter
 router.post('/signin', (req, res) => {
-
-  User.findOne({ email: req.body.email }).then(data => {
-    // bcrypt compare le mot de passe haché avec celui recu et si c est bon, il envoie le token.
-    if (data && bcrypt.compareSync(req.body.password, data.password)) {
-      res.json({ result: true, token: data.token });
+  User.findOne({ email: req.body.email }).then(user => {
+    // Vérifie si l'utilisateur existe et si le mot de passe est correct
+    if (user && bcrypt.compareSync(req.body.password, user.password)) {
+      // Renvoie toutes les informations de l'utilisateur connecté
+      res.json({
+          result: true,
+          token: user.token,
+          email: user.email,
+          civility: user.civility,
+          name: user.name,
+          firstname: user.firstname,
+          address: user.address,
+          city: user.city,
+          zip: user.zip,
+          phone: user.phone,
+          type: user.type,
+          children: user.children,
+       
+      });
     } else {
       res.json({ result: false, error: 'User not found or wrong password' });
     }
+  }).catch(err => {
+    res.status(500).json({ result: false, error: err.message });
   });
-  
 });
 
 
@@ -61,7 +76,7 @@ router.post('/signin', (req, res) => {
             civility: req.body.civility,
             name: req.body.name,
             firstname: req.body.firstname,
-            adress: req.body.adress,
+            address: req.body.address,
             city: req.body.city,
             zip: req.body.zip,
             phone: req.body.phone,
@@ -85,19 +100,20 @@ router.post('/signin', (req, res) => {
  //creation de la route pour ajouté un enfant
 
  router.post('/addChild', (req,res)=>{
-  console.log(req.body.token)
+ 
   // condition qui verifie que tout les champs sont bien remplit
   if (!req.body.firstnamechild || !req.body.namechild || !req.body.birthdate || !req.body.token){
    res.json({ result: false, message: 'Not complette infos'})
   }else{
-    User.findOneAndUpdate({ token : req.body.token},
+    User.updateOne({ token : req.body.token},
       {  // $push operateur mongoose pour push un nouveau enfant dans le tableau du sous document
          $push: { children: { firstnamechild: req.body.firstnamechild, namechild: req.body.namechild, birthdate: req.body.birthdate } }, 
          type: req.body.type 
       },
     )
     .then(() => {
-      User.findOne().then(data=>{
+      User.findOne({ token : req.body.token}).then(data=>{
+        console.log('route addChild', data.token )
         res.json({ result: true, message: 'Enfant ajouté avec succès', donnee : data});
       })
     }) 
