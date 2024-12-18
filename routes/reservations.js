@@ -53,4 +53,26 @@ router.post('/', async (req, res) => {
     }
 })
 
+// création de la route pour recuperer toutes les reservations du parent.
+router.post('/allReservations', (req, res) => {
+    const parentId = req.body._id; 
+  
+    if (!parentId) {
+      return res.status(400).json({ result: false, error: 'Parent ID manquant' });
+    }
+    Reservation.find({ parent: parentId }) // Recherche toutes les réservations où `parent` correspond à l'ObjectId fourni
+      .populate('parent') // Charge les détails du parent
+      .populate('establishment') // Charge les détails de l'établissement
+      .then((data) => {
+        if (data.length === 0) {
+          return res.status(404).json({ result: false, error: 'Aucune réservation trouvée pour ce parent' });
+        }
+        res.json({ result: true, dataReservation: data });
+      })
+      .catch((err) => {
+        console.error('Erreur lors de la récupération des réservations:', err);
+        res.status(500).json({ result: false, error: 'Erreur serveur' });
+      });
+  });
+  
 module.exports = router;
