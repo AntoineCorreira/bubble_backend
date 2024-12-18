@@ -145,17 +145,46 @@ router.post('/signin', (req, res) => {
 
 
 router.get('/children', (req, res) => {
-  const userId = req.query.userId; // Utiliser l'ID de l'utilisateur depuis les paramètres de requête
+  const userId = req.query.userId; 
+
+  console.log('Requête reçue pour l\'ID utilisateur:', userId);
 
   User.findById(userId).select('children').then(user => {
     if (!user) {
+      console.error('Utilisateur non trouvé pour l\'ID:', userId);
       return res.status(404).json({ error: 'User not found' });
     }
-    res.json(user.children); // Renvoie uniquement les enfants de l'utilisateur connecté
+    console.log('Données des enfants récupérées depuis la base de données:', user.children);
+
+    if (Array.isArray(user.children)) {
+      res.json(user.children); // Renvoie uniquement les enfants de l'utilisateur connecté
+    } else {
+      console.error('Les données des enfants ne sont pas un tableau:', user.children);
+      res.status(500).json({ error: 'Les données des enfants ne sont pas au bon format' });
+    }
   }).catch(error => {
     console.error('Erreur lors de la récupération des enfants:', error);
     res.status(500).json({ error: 'An error occurred while retrieving children.' });
   });
 });
+
+
+// Route pour récupérer les informations utilisateur par ID
+router.get('/:id', (req, res) => {
+  const userId = req.params.id;
+  
+  User.findById(userId)
+    .then(user => {
+      if (!user) {
+        return res.status(404).json({ error: 'User not found' });
+      }
+      res.json(user);
+    })
+    .catch(error => {
+      console.error('Error fetching user:', error);
+      res.status(500).json({ error: 'An error occurred while fetching user data.' });
+    });
+});
+
 
 module.exports = router;
