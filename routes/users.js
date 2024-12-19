@@ -187,4 +187,105 @@ router.get('/:id', (req, res) => {
 });
 
 
+router.put('/updateProfile/:id', (req, res) => {
+  // Récupère l'ID de l'utilisateur depuis les paramètres de l'URL
+  const userId = req.params.id;
+
+  // Récupère les données envoyées dans le corps de la requête pour mettre à jour le profil de l'utilisateur
+  const { password, children, address, city, civility, firstname, name, phone, zip, type } = req.body;
+
+  // Crée un objet qui contiendra les champs à mettre à jour
+  let updateFields = {};
+
+  // Si un mot de passe est fourni dans la requête, on le hache avant de l'ajouter aux champs à mettre à jour
+  if (password) {
+    const bcrypt = require('bcrypt');  // On importe bcrypt pour le hachage du mot de passe
+    updateFields.password = bcrypt.hashSync(password, 10);  // Hachage du mot de passe avec un salage de 10 tours
+  }
+
+  // Si d'autres informations sont envoyées, on les ajoute dans l'objet updateFields
+  if (address) updateFields.address = address;
+  if (city) updateFields.city = city;
+  if (civility) updateFields.civility = civility;
+  if (firstname) updateFields.firstname = firstname;
+  if (name) updateFields.name = name;
+  if (phone) updateFields.phone = phone;
+  if (zip) updateFields.zip = zip;
+  if (type) updateFields.type = type;
+
+  // Si des enfants sont envoyés dans la requête, on les ajoute également dans updateFields
+  if (children) {
+    updateFields.children = children;  // On met à jour directement la liste des enfants
+  }
+
+  // Si aucun champ à mettre à jour n'a été envoyé, on renvoie une erreur
+  if (Object.keys(updateFields).length === 0) {
+    return res.status(400).json({ result: false, message: 'No data provided to update' });
+  }
+
+  // On effectue la mise à jour dans la base de données avec les champs spécifiés
+  User.findByIdAndUpdate(userId, updateFields, { new: true })
+    .then((updatedUser) => {
+      // Si l'utilisateur n'est pas trouvé, on renvoie une erreur
+      if (!updatedUser) {
+        return res.status(404).json({ result: false, message: 'User not found' });
+      }
+      // Si l'utilisateur est trouvé et mis à jour, on renvoie l'utilisateur mis à jour
+      res.json({ result: true, updatedUser });
+    })
+    .catch((error) => {
+      // En cas d'erreur lors de la mise à jour, on renvoie une erreur 500
+      res.status(500).json({ result: false, message: 'Update error', error });
+    });
+});
+
+
+// Route pour supprimer un enfant
+router.put('/removeChild/:userId', (req, res) => {
+  const userId = req.params.userId;
+  const childId = req.body.childId;  // Récupère l'ID de l'enfant à supprimer
+
+  // Utilise l'opérateur $pull pour supprimer l'enfant du tableau "children"
+  User.findByIdAndUpdate(
+    userId,
+    { $pull: { children: { _id: childId } } },  // Recherche de l'enfant par son _id et suppression
+    { new: true }
+  )
+    .then((updatedUser) => {
+      if (!updatedUser) {
+        return res.status(404).json({ result: false, message: 'User not found' });
+      }
+      res.json({ result: true, updatedUser });
+    })
+    .catch((error) => {
+      res.status(500).json({ result: false, message: 'Update error', error });
+    });
+});
+
+
+// Route pour ajouter un enfant
+router.put('/addChild/:userId', (req, res) => {
+  const userId = req.params.userId;
+  const newChild = req.body.newChild;  // L'enfant à ajouter (doit être un objet avec les propriétés du modèle)
+
+  // Utilisation de $push pour ajouter l'enfant au tableau
+  User.findByIdAndUpdate(
+    userId,
+    { $push: { children: newChild } },  // Ajoute l'enfant au tableau "children"
+    { new: true }
+  )
+    .then((updatedUser) => {
+      if (!updatedUser) {
+        return res.status(404).json({ result: false, message: 'User not found' });
+      }
+      res.json({ result: true, updatedUser });
+    })
+    .catch((error) => {
+      res.status(500).json({ result: false, message: 'Update error', error });
+    });
+});
+
+
+
+
 module.exports = router;
