@@ -3,19 +3,19 @@ const app = require('./app');
 
 const validData = {
     startDate: '13/12/2024',
-    endDate: '13/12/2024',
-    parentFirstname: 'Antoine',
-    parentName: 'Correira',
-    childrenName: 'Lio',
+    endDate: '14/12/2024',
+    parentFirstname: 'Doriane',
+    parentName: 'Thomas',
+    child: '6762da8bf9273a484066f44b',
     establishmentName: 'Crèche Bordeaux 1',
     establishmentZip: '33000',
-    status: 'Pending',
+    status: 'pending',
 }
 
-describe('POST /reservation', () => {
+describe('POST /reservations', () => {
     it('should create a reservation successfully with valid data', async () => {
         const res = await request(app)
-            .post('/reservation')
+            .post('/reservations')
             .send(validData);
             
         expect(res.statusCode).toBe(200);
@@ -28,7 +28,7 @@ describe('POST /reservation', () => {
             delete invalidData[field];  // On retire le champ de la copie
 
             const res = await request(app)
-                .post('/reservation')
+                .post('/reservations')
                 .send(invalidData); // On envoie les données avec un champ manquant
 
             expect(res.statusCode).toBe(400);

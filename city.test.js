@@ -1,7 +1,7 @@
 const request = require('supertest');
-const app = require('../bubble_backend/app'); 
+const app = require('../backend/app'); 
 const mongoose = require('mongoose');
-const Establishment = require('../bubble_backend/models/establishments');
+const Establishment = require('../backend/models/establishments');
 
 describe('GET /establishments/city', () => {
   afterAll(async () => {

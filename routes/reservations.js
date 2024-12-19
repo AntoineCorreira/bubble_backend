@@ -46,7 +46,7 @@ router.post('/', async (req, res) => {
         });
 
         await newReservation.save();
-        res.json(newReservation)
+        res.json({result: true, newReservation})
     } catch (error) {
         console.log(error)
         res.json({ message: 'Erreur serveur' })
